@@ -1,3 +1,4 @@
 import 'package:flutter/material.dart';
 
-const Color_blue_text = Color(0xFF00114d);
+const Color dPrimeryColors = Color(0xFF00114d);
+const Color dSecondaryColors = Color(0xFF77869C);

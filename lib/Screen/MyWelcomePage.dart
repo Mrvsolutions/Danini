@@ -1,5 +1,6 @@
 import 'package:danini/Comman/ColorFile.dart';
 import 'package:danini/Comman/stringfile.dart';
+import 'package:danini/Screen/login_scree.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,7 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
             Text(
               "Welcome",
               style: TextStyle(
-                  color: Color_blue_text,
+                  color: dPrimeryColors,
                   fontSize: 30,
                   fontWeight: FontWeight.bold),
             ),
@@ -46,7 +47,7 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
               child: Text(
                 StrWelcomeDesription,
                 style: TextStyle(
-                    color: Color_blue_text,
+                    color: dPrimeryColors,
                     fontSize: 12,
                     fontWeight: FontWeight.w400),
               ),
@@ -59,10 +60,15 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
               children: <Widget>[
                 Container(
                   child: SizedBox(
-                    height: 65,
+                    height: 55,
                     width: MediaQuery.of(context).size.width / 3,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushAndRemoveUntil(
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => LoginScreen()),
+                                (Route<dynamic> route) => false);
+                      },
                       child: Text(
                         "Sign in",
                         style: TextStyle(
@@ -70,7 +76,7 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
                             fontWeight: FontWeight.w400,
                             fontSize: 18),
                       ),
-                      color: Color_blue_text,
+                      color: dPrimeryColors,
                       shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(10.0),
                       ),
@@ -79,14 +85,14 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
                 ),
                 Container(
                   child: SizedBox(
-                    height: 65,
+                    height: 55,
                     width: MediaQuery.of(context).size.width / 3,
                     child: RaisedButton(
                       onPressed: () {},
                       child: Text(
                         "Sign up",
                         style: TextStyle(
-                            color: Color_blue_text,
+                            color: dPrimeryColors,
                             fontWeight: FontWeight.w400,
                             fontSize: 18),
                       ),
