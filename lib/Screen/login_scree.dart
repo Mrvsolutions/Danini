@@ -1,5 +1,6 @@
 import 'package:danini/Comman/ColorFile.dart';
 import 'package:danini/Comman/stringfile.dart';
+import 'package:danini/Screen/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -57,7 +58,12 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => HomeScreen()),
+                        (Route<dynamic> route) => false);
+              },
               child: Container(
                 width: double.infinity,
                 height: 50,
