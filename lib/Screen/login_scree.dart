@@ -1,6 +1,6 @@
 import 'package:danini/Comman/ColorFile.dart';
 import 'package:danini/Comman/stringfile.dart';
-import 'package:danini/Screen/home/home_screen.dart';
+import 'package:danini/Screen/Dashboard/Dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -61,7 +61,7 @@ class LoginScreen extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(
-                        builder: (BuildContext context) => HomeScreen()),
+                        builder: (BuildContext context) => Dashboard()),
                         (Route<dynamic> route) => false);
               },
               child: Container(
