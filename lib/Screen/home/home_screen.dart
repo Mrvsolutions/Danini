@@ -19,10 +19,10 @@ class HomeScreen extends StatelessWidget {
         onPressed: () {},
       ),
       actions: <Widget>[
-        IconButton(
-          icon: Icon(Icons.search,color: Colors.grey),
-          onPressed: () {},
-        ),
+        // IconButton(
+        //   icon: Icon(Icons.search,color: Colors.grey),
+        //   onPressed: () {},
+        // ),
         IconButton(
           icon: Icon(Icons.shopping_cart_outlined,color: Colors.grey),
           onPressed: () {},

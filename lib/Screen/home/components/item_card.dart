@@ -21,32 +21,32 @@ class ItemCard extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(5),
               // For  demo we use fixed height  and width
               // Now we dont need them
               // height: 180,
               // width: 160,
               decoration: BoxDecoration(
                 color: product.color,
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(20),
               ),
               child: Hero(
                 tag: "${product.id}",
-                child: Image.asset(product.image),
+                child: Image.asset(product.image,fit: BoxFit.cover),
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20 / 4),
+            padding: const EdgeInsets.symmetric(vertical: 5),
             child: Text(
               // products is out demo list
               product.title,
-              style: TextStyle(color: kTextColor),
+              style: TextStyle(color: kTextColor,fontWeight: FontWeight.w500),
             ),
           ),
           Text(
             "\$${product.price}",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(color: ktextpriceColor),
           )
         ],
       ),
