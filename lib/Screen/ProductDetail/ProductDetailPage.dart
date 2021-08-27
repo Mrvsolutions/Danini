@@ -6,13 +6,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class ProductDetailPage extends StatefulWidget {
-
   @override
   _ProductDetailPageState createState() => _ProductDetailPageState();
 }
 
 class _ProductDetailPageState extends State<ProductDetailPage> {
   final ProductDetailcontroller controller = Get.put(ProductDetailcontroller());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,14 +29,14 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   child: Container(
                     height: MediaQuery.of(context).size.height / 3.8,
                     child: Obx(() => Carousel(
-                      dotBgColor: Colors.transparent,
-                      dotColor: Colors.black12,
-                      dotIncreasedColor: Colors.black26,
-                      images: controller.images
-                          .map((e) => Image.network(e))
-                          .toList(),
-                      boxFit: BoxFit.cover,
-                    )),
+                          dotBgColor: Colors.transparent,
+                          dotColor: Colors.black12,
+                          dotIncreasedColor: Colors.black26,
+                          images: controller.images
+                              .map((e) => Image.network(e))
+                              .toList(),
+                          boxFit: BoxFit.cover,
+                        )),
                   ),
                 ),
               ],

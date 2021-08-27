@@ -1,4 +1,4 @@
-import 'package:danini/Screen/login_scree.dart';
+import 'package:danini/Screen/ProductDetail/ProductDetailPage.dart';
 import 'package:danini/models/Product.dart';
 import 'package:flutter/material.dart';
 import 'categorries.dart';
@@ -38,9 +38,7 @@ class Body extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  LoginScreen(
-                                  ),
+                              builder: (context) => ProductDetailPage(),
                             ));
                       },
                     )),
