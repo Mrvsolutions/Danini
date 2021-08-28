@@ -6,6 +6,8 @@ import 'package:danini/Screen/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../BuildAppToolBar.dart';
+
 class DynamicImgSlider extends StatelessWidget {
   final ImgController controller = Get.put(ImgController());
   final ImgController1 controller1 = Get.put(ImgController1());
@@ -13,7 +15,7 @@ class DynamicImgSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
+      appBar: BuildAppToolBar(context,"Home",false),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(5.0),
@@ -132,7 +134,7 @@ class DynamicImgSlider extends StatelessWidget {
                 ),
                 Container(
                     margin: EdgeInsets.symmetric(vertical: 5.0),
-                    height: MediaQuery.of(context).size.height / 2.8,
+                    height: 250,
                     child: GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushAndRemoveUntil(
@@ -518,38 +520,6 @@ class DynamicImgSlider extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-
-  AppBar buildAppBar() {
-    return AppBar(
-      backgroundColor: Colors.white,
-      elevation: 0,
-      leading: IconButton(
-        icon: Icon(
-          Icons.menu_rounded,
-          color: Colors.grey,
-        ),
-        onPressed: () {},
-      ),
-      title: Center(
-        child: Text(
-          "Home",
-          style: TextStyle(
-              fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-      ),
-      actions: <Widget>[
-        // IconButton(
-        //   icon: Icon(Icons.search, color: Colors.grey),
-        //   onPressed: () {},
-        // ),
-        IconButton(
-          icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
-          onPressed: () {},
-        ),
-        SizedBox(width: 20 / 2)
-      ],
     );
   }
 }
