@@ -1,5 +1,6 @@
 import 'package:danini/Comman/ColorFile.dart';
 import 'package:danini/Comman/stringfile.dart';
+import 'package:danini/Screen/Signup_Screen.dart';
 import 'package:danini/Screen/login_scree.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -66,8 +67,9 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
                       onPressed: () {
                         Navigator.of(context).pushAndRemoveUntil(
                             MaterialPageRoute(
-                                builder: (BuildContext context) => LoginScreen()),
-                                (Route<dynamic> route) => false);
+                                builder: (BuildContext context) =>
+                                    LoginScreen()),
+                            (Route<dynamic> route) => false);
                       },
                       child: Text(
                         "Sign in",
@@ -88,7 +90,13 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
                     height: 55,
                     width: MediaQuery.of(context).size.width / 3,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushAndRemoveUntil(
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    Signup_Screen()),
+                            (Route<dynamic> route) => false);
+                      },
                       child: Text(
                         "Sign up",
                         style: TextStyle(

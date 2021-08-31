@@ -5,4 +5,5 @@ const String forgotPassword = 'Forgor Password?';
 const String signIn = 'Sign in';
 const String orViaSocialMedia = 'or Via Social Media?';
 const String dontHaveAccount = 'Don\'t Have Account?';
+const String alreadyHaveAccount = 'Already Have an Account?';
 const String signUp = 'Signup!';
