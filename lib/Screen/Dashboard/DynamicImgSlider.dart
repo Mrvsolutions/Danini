@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../BuildAppToolBar.dart';
+import '../../NavDrawer.dart';
 
 class DynamicImgSlider extends StatelessWidget {
   final ImgController controller = Get.put(ImgController());
@@ -15,6 +16,7 @@ class DynamicImgSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavDrawer(),
       appBar: BuildAppToolBar(context,"Home",false),
       body: SingleChildScrollView(
         child: Padding(
@@ -155,8 +157,7 @@ class DynamicImgSlider extends StatelessWidget {
                                 Container(
                                   width:
                                       MediaQuery.of(context).size.width / 2.8,
-                                  height:
-                                      MediaQuery.of(context).size.height / 4,
+                                  height: 175,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
                                     image: DecorationImage(
@@ -223,8 +224,7 @@ class DynamicImgSlider extends StatelessWidget {
                                 Container(
                                   width:
                                       MediaQuery.of(context).size.width / 2.8,
-                                  height:
-                                      MediaQuery.of(context).size.height / 4,
+                                  height:175,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
                                     image: DecorationImage(
@@ -292,7 +292,7 @@ class DynamicImgSlider extends StatelessWidget {
                                   width:
                                       MediaQuery.of(context).size.width / 2.8,
                                   height:
-                                      MediaQuery.of(context).size.height / 4,
+                                      175,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
                                     image: DecorationImage(

@@ -1,46 +1,242 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
-class NavDrawer extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+
+import 'Comman/ColorFile.dart';
+
+class NavDrawer extends StatefulWidget {
+  @override
+  _NavDrawerState createState() => _NavDrawerState();
+}
+
+class _NavDrawerState extends State<NavDrawer> {
+  // final ImagePicker _picker = ImagePicker();
+  // File _image;
+
+  late String Uploaded_pimgUrl;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  // _imgFromCamera() async {
+  //   //  File image = await ImagePicker.pickImage(source: ImageSource.camera);
+  //   PickedFile pickedFile = await _picker.getImage(source: ImageSource.camera);
+  //   final File image = File(pickedFile.path);
+  //
+  //   setState(() {
+  //     _image = image;
+  //     UploadProfilePicRequest();
+  //   });
+  // }
+  //
+  // _imgFromGallery() async {
+  //   //  File image = await ImagePicker.pickImage(source: ImageSource.gallery);
+  //   PickedFile pickedFile = await _picker.getImage(source: ImageSource.gallery);
+  //   final File image = File(pickedFile.path);
+  //   setState(() {
+  //     _image = image;
+  //   //  UploadProfilePicRequest();
+  //   });
+  // }
+  // void _showPicker(context) {
+  //   showModalBottomSheet(
+  //       context: context,
+  //       builder: (BuildContext bc) {
+  //         return SafeArea(
+  //           child: Container(
+  //             child: new Wrap(
+  //               children: <Widget>[
+  //                 new ListTile(
+  //                     leading: new Icon(Icons.photo_library),
+  //                     title: new Text('Photo Library'),
+  //                     onTap: () {
+  //                       _imgFromGallery();
+  //                       Navigator.of(context).pop();
+  //                     }),
+  //                 new ListTile(
+  //                   leading: new Icon(Icons.photo_camera),
+  //                   title: new Text('Camera'),
+  //                   onTap: () {
+  //                     _imgFromCamera();
+  //                     Navigator.of(context).pop();
+  //                   },
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //         );
+  //       }
+  //   );
+  // }
+  //
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
-            child: Text(
-              'Side menu',
-              style: TextStyle(color: Colors.white, fontSize: 25),
+          Container(
+            height: 250,
+            child: DrawerHeader(
+              child: Padding(
+                padding: EdgeInsets.only(top: 30.0),
+                child: Stack(children: <Widget>[
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      new CircleAvatar(
+                        radius: 50,
+                        backgroundColor: Colors.white,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.grey[200],
+                              borderRadius: BorderRadius.circular(50)),
+                          width: 100,
+                          height: 100,
+                          child: Image.asset('assets/person.png'),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                      padding:
+                          EdgeInsets.only(top: 60.0, left: 95.0, right: 10),
+                      child: InkWell(
+                        onTap: () {
+                          // _showPicker(context);
+                        },
+                        child: new Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            new CircleAvatar(
+                              backgroundColor: Colors.white,
+                              radius: 15.0,
+                              child: Padding(
+                                padding: const EdgeInsets.all(2.0),
+                                child: Container(
+                                    decoration: BoxDecoration(
+                                        color: dPrimeryColors,
+                                        borderRadius:
+                                            BorderRadius.circular(50)),
+                                    width: 25,
+                                    height: 25,
+                                    child: Icon(Icons.edit,
+                                        color: Colors.white, size: 15)),
+                              ),
+                            )
+                          ],
+                        ),
+                      )),
+                  Padding(
+                    padding:
+                        EdgeInsets.only(top: 50.0, left: 0, right: 0),
+                    child: Center(
+                      child: Text(
+                        "Vimal Parmar",
+                        style: TextStyle(
+                            color: kdrawertitlecolor,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                    EdgeInsets.only(top: 100.0, left: 0, right: 0),
+                    child: Center(
+                      child: Text(
+                        "VimalParmar@gmail.com",
+                        style: TextStyle(
+                            color: kdrawertitlecolor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ),
+                  ),
+                ]),
+              ),
             ),
-            decoration: BoxDecoration(
-                color: Colors.green,
-                image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/images/cover.jpg'))),
           ),
           ListTile(
-            leading: Icon(Icons.input),
-            title: Text('Welcome'),
+            leading: Image.asset(
+              'assets/ic_home.png',
+              height: 20,
+              width: 20,
+            ),
+            title: Text('Home'),
             onTap: () => {},
           ),
           ListTile(
-            leading: Icon(Icons.verified_user),
-            title: Text('Profile'),
+            leading: Image.asset(
+              'assets/ic_categories.png',
+              height: 20,
+              width: 20,
+            ),
+            title: Text('Categories'),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
-            leading: Icon(Icons.settings),
+            leading: Image.asset(
+              'assets/ic_discount_coupon.png',
+              height: 20,
+              width: 20,
+            ),
+            title: Text('Discount Coupon'),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+          ListTile(
+            leading: Image.asset(
+              'assets/ic_order_history.png',
+              height: 20,
+              width: 20,
+            ),
+            title: Text('Order history'),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+          ListTile(
+            leading: Image.asset(
+              'assets/ic_cart.png',
+              height: 20,
+              width: 20,
+            ),
+            title: Text('Cart'),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+          ListTile(
+            leading: Image.asset(
+              'assets/ic_notification.png',
+              height: 20,
+              width: 20,
+            ),
+            title: Text('Notifications'),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+          ListTile(
+            leading: Icon(Icons.person, color: Colors.grey),
+            title: Text('My Account'),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+          ListTile(
+            leading: Image.asset(
+              'assets/ic_setting.png',
+              height: 20,
+              width: 20,
+            ),
             title: Text('Settings'),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
-            leading: Icon(Icons.border_color),
-            title: Text('Feedback'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
-          ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text('Logout'),
+            leading: Image.asset(
+              'assets/ic_about.png',
+              height: 20,
+              width: 20,
+            ),
+            title: Text('About'),
             onTap: () => {Navigator.of(context).pop()},
           ),
         ],

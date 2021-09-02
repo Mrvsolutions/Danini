@@ -25,6 +25,9 @@ PreferredSize BuildAppToolBar(
             {
               Navigator.pop(context);
             }
+          else{
+            Scaffold.of(context).openDrawer();
+          }
         },
       ),
       title: Center(
