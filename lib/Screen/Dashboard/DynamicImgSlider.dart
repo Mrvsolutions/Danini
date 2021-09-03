@@ -28,6 +28,45 @@ class DynamicImgSlider extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: Container(
+                    height: 40,
+                    color: Colors.transparent,
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: TextField(
+                            decoration: InputDecoration(
+                              prefixIcon: Icon(Icons.search,color: ktextpriceColor,),
+                              hintText: "Search",hintStyle: TextStyle(fontSize: 14,color: ktextpriceColor),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(5.0),
+                                  borderSide: BorderSide.none),
+                              fillColor: Colors.white,
+                              filled: true,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 5),
+                        Container(
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: ktextpriceColor,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: IconButton(
+                            icon: Icon(Icons.filter_list,color: Colors.white,),
+                            onPressed: () {
+                              // Provider.of<MyBottomSheetModel>(context)
+                              //     .changeState();
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                  child: Container(
                     height: MediaQuery.of(context).size.height / 3.8,
                     child: Obx(() => Carousel(
                           dotBgColor: Colors.transparent,
