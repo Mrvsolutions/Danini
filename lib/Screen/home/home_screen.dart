@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BuildAppToolBar(context, "Products", false),
+      appBar: BuildAppToolBar(context, "Products", false,true),
       drawer: NavDrawer(),
       body: Body(),
     );

@@ -25,7 +25,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: BuildAppToolBar(context, "Product Detail", true),
+        appBar: BuildAppToolBar(context, "Product Detail", true, true),
         body: Padding(
           padding: const EdgeInsets.all(5.0),
           child: Container(
@@ -337,8 +337,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     "Luxurious Fabric Signature 100% Egyptian Cotton",
                                                     style: TextStyle(
                                                         fontWeight:
-                                                            FontWeight.w100,
-                                                        fontFamily: 'GothaPro',
+                                                            FontWeight.normal,
                                                         color: kdetailcolor,
                                                         fontSize: 12),
                                                     textAlign: TextAlign.left,
@@ -362,8 +361,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     "Immaculate Details",
                                                     style: TextStyle(
                                                         fontWeight:
-                                                            FontWeight.w100,
-                                                        fontFamily: 'GothaPro',
+                                                            FontWeight.normal,
                                                         color: kdetailcolor,
                                                         fontSize: 12),
                                                     textAlign: TextAlign.left,
@@ -387,8 +385,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     "Perfect Slim Fit",
                                                     style: TextStyle(
                                                         fontWeight:
-                                                            FontWeight.w100,
-                                                        fontFamily: 'GothaPro',
+                                                            FontWeight.normal,
                                                         color: kdetailcolor,
                                                         fontSize: 12),
                                                     textAlign: TextAlign.left,
@@ -439,8 +436,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     style: TextStyle(
                                                         color: ktextpriceColor,
                                                         fontWeight:
-                                                            FontWeight.w100,
-                                                        fontFamily: 'GothaPro',
+                                                            FontWeight.normal,
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   )
@@ -467,8 +463,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     style: TextStyle(
                                                         color: ktextpriceColor,
                                                         fontWeight:
-                                                            FontWeight.w100,
-                                                        fontFamily: 'GothaPro',
+                                                            FontWeight.normal,
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   )
@@ -495,8 +490,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     style: TextStyle(
                                                         color: ktextpriceColor,
                                                         fontWeight:
-                                                            FontWeight.w100,
-                                                        fontFamily: 'GothaPro',
+                                                            FontWeight.normal,
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   )

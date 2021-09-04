@@ -11,3 +11,5 @@ const koffwhite = Color(0xFFf2f2f2);
 const kdetailcolor = Color(0xFF2e2e2e);
 const kdrawertitlecolor = Color(0xFF393939);
 const colorbottomtext = Color(0xFF969696);
+const colorSliderActive = Color(0xFF0e1d9e);
+const colorSliderInActive = Color(0xFFf5f5f7);

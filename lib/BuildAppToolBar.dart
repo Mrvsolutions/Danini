@@ -4,11 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'Comman/ColorFile.dart';
 
 PreferredSize BuildAppToolBar(
-    BuildContext context, String TitleHeading, bool IsBackArrowShow) {
-  bool _isVisible = false;
-  bool _IsHomeIconShow = false;
-  int selectedindix = 0;
-
+    BuildContext context, String TitleHeading, bool IsBackArrowShow, bool _isVisible) {
   return PreferredSize(
     preferredSize: Size.fromHeight(50),
     child: AppBar(
@@ -43,9 +39,12 @@ PreferredSize BuildAppToolBar(
         //   icon: Icon(Icons.search, color: Colors.grey),
         //   onPressed: () {},
         // ),
-        IconButton(
-          icon: Icon(Icons.shopping_cart_outlined, color: dPrimeryColors),
-          onPressed: () {},
+        Visibility(
+          visible:_isVisible ,
+          child: IconButton(
+            icon: Icon(Icons.shopping_cart_outlined, color: dPrimeryColors),
+            onPressed: () {},
+          ),
         ),
         SizedBox(width: 20 / 2)
       ],

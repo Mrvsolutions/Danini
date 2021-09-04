@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 
 import '../../BuildAppToolBar.dart';
 import '../../NavDrawer.dart';
+import '../filterpage.dart';
 
 class DynamicImgSlider extends StatelessWidget {
   final ImgController controller = Get.put(ImgController());
@@ -17,7 +18,7 @@ class DynamicImgSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
-      appBar: BuildAppToolBar(context, "Home", false),
+      appBar: BuildAppToolBar(context, "Home", false,true),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(5.0),
@@ -65,8 +66,11 @@ class DynamicImgSlider extends StatelessWidget {
                               color: Colors.white,
                             ),
                             onPressed: () {
-                              // Provider.of<MyBottomSheetModel>(context)
-                              //     .changeState();
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => FilterPage(),
+                                  ));
                             },
                           ),
                         ),
