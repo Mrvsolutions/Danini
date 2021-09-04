@@ -1,8 +1,8 @@
 import 'package:danini/Comman/ColorFile.dart';
 import 'package:danini/Comman/stringfile.dart';
 import 'package:danini/Screen/Dashboard/Dashboard.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -16,11 +16,13 @@ class LoginScreen extends StatelessWidget {
           children: [
             SizedBox(height: 20),
             Center(
-              child: Text(welcome,
+              child: Text(
+                welcomeBack,
                 style: TextStyle(
                   color: dPrimeryColors,
                   fontSize: 26,
-                  fontWeight: FontWeight.bold,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ),
@@ -51,8 +53,13 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {},
-                child: Text(forgotPassword,
-                  style: TextStyle(color: dPrimeryColors),
+                child: Text(
+                  forgotPassword,
+                  style: TextStyle(
+                      color: dPrimeryColors,
+                      fontFamily: 'GothaPro',
+                      fontSize: 14,
+                      fontWeight: FontWeight.w300),
                 ),
               ),
             ),
@@ -62,7 +69,7 @@ class LoginScreen extends StatelessWidget {
                 Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(
                         builder: (BuildContext context) => Dashboard()),
-                        (Route<dynamic> route) => false);
+                    (Route<dynamic> route) => false);
               },
               child: Container(
                 width: double.infinity,
@@ -71,29 +78,35 @@ class LoginScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: dPrimeryColors,
                     borderRadius: BorderRadius.circular(10)),
-                child: Text(signIn,
+                child: Text(
+                  signIn,
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
-                      fontWeight: FontWeight.w600),
+                      fontFamily: 'GothaPro',
+                      fontWeight: FontWeight.w500),
                 ),
               ),
             ),
             SizedBox(height: 20),
             Align(
               alignment: Alignment.center,
-              child: Text(orViaSocialMedia,
-                style:
-                    TextStyle(color: dSecondaryColors, fontSize: 12),
+              child: Text(
+                orViaSocialMedia,
+                style: TextStyle(
+                    color: dSecondaryColors,
+                    fontSize: 12,
+                    fontFamily: 'GothaPro',
+                    fontWeight: FontWeight.w300),
               ),
             ),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                buildLoginSources('assets/ic_google.png',context),
-                buildLoginSources('assets/ic_facebook.png',context),
-                buildLoginSources('assets/ic_twitter.png',context),
+                buildLoginSources('assets/ic_google.png', context),
+                buildLoginSources('assets/ic_facebook.png', context),
+                buildLoginSources('assets/ic_twitter.png', context),
               ],
             ),
             SizedBox(
@@ -102,11 +115,21 @@ class LoginScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(dontHaveAccount),
+                Text(
+                  dontHaveAccount,
+                  style: TextStyle(
+                      color: colorbottomtext,
+                      fontFamily: 'GothaPro',
+                      fontWeight: FontWeight.w300),
+                ),
                 TextButton(
                   onPressed: () {},
-                  child: Text(signUp,
-                    style: TextStyle(color: dPrimeryColors,fontWeight: FontWeight.bold),
+                  child: Text(
+                    signUp,
+                    style: TextStyle(
+                        color: dPrimeryColors,
+                        fontFamily: 'GothaPro',
+                        fontWeight: FontWeight.w300),
                   ),
                 ),
               ],
@@ -117,16 +140,16 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Container buildLoginSources(String imagePath,BuildContext context) {
+  Container buildLoginSources(String imagePath, BuildContext context) {
     return Container(
       alignment: Alignment.center,
       height: 55,
-      width: MediaQuery.of(context).size.width /4,
+      width: MediaQuery.of(context).size.width / 4,
       decoration: BoxDecoration(
-        border: Border.all(color: dSecondaryColors,width: 0.5),
+        border: Border.all(color: dSecondaryColors, width: 0.5),
         borderRadius: BorderRadius.circular(10),
         image: DecorationImage(
-          scale:14,
+          scale: 14,
           image: AssetImage(imagePath),
         ),
       ),
@@ -141,7 +164,11 @@ class BuildTextField extends StatelessWidget {
   final bool isEnable;
 
   const BuildTextField(
-      { Key? key,  required this.mIcon, required this.dSuffixIcon, required this.hint,  required this.isEnable})
+      {Key? key,
+      required this.mIcon,
+      required this.dSuffixIcon,
+      required this.hint,
+      required this.isEnable})
       : super(key: key);
 
   @override
@@ -150,6 +177,11 @@ class BuildTextField extends StatelessWidget {
       children: [
         TextField(
           textAlign: TextAlign.start,
+          style: TextStyle(
+              color: dPrimeryColors,
+              fontSize: 15,
+              fontFamily: 'GothaPro',
+              fontWeight: FontWeight.w300),
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 20),
             border: InputBorder.none,

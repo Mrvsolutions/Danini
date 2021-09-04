@@ -17,7 +17,7 @@ class DynamicImgSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
-      appBar: BuildAppToolBar(context,"Home",false),
+      appBar: BuildAppToolBar(context, "Home", false),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(5.0),
@@ -35,8 +35,14 @@ class DynamicImgSlider extends StatelessWidget {
                         Expanded(
                           child: TextField(
                             decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.search,color: ktextpriceColor),
-                              hintText: "Search",hintStyle: TextStyle(fontSize: 14,color: ktextpriceColor),
+                              prefixIcon:
+                                  Icon(Icons.search, color: ktextpriceColor),
+                              hintText: "Search",
+                              hintStyle: TextStyle(
+                                  fontSize: 12,
+                                  color: ktextpriceColor,
+                                  fontFamily: 'GothaPro',
+                                  fontWeight: FontWeight.w300),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0),
                                   borderSide: BorderSide.none),
@@ -54,7 +60,10 @@ class DynamicImgSlider extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: IconButton(
-                            icon: Icon(Icons.filter_list,color: Colors.white,),
+                            icon: Icon(
+                              Icons.filter_list,
+                              color: Colors.white,
+                            ),
                             onPressed: () {
                               // Provider.of<MyBottomSheetModel>(context)
                               //     .changeState();
@@ -92,8 +101,9 @@ class DynamicImgSlider extends StatelessWidget {
                         "Comming soon",
                         style: TextStyle(
                             color: kTexttitle,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
+                            fontSize: 16,
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                     Padding(
@@ -102,8 +112,9 @@ class DynamicImgSlider extends StatelessWidget {
                         "View all",
                         style: TextStyle(
                             color: dSecondaryColors,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500),
+                            fontSize: 14,
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                   ],
@@ -157,9 +168,9 @@ class DynamicImgSlider extends StatelessWidget {
                       child: Text(
                         "New Arrival",
                         style: TextStyle(
-                            color: kTexttitle,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
+                            fontSize: 16,
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                     Padding(
@@ -168,8 +179,9 @@ class DynamicImgSlider extends StatelessWidget {
                         "View all",
                         style: TextStyle(
                             color: dSecondaryColors,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500),
+                            fontSize: 14,
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                   ],
@@ -211,8 +223,9 @@ class DynamicImgSlider extends StatelessWidget {
                                   child: Text(
                                     'Classic Ink Blue Shirt',
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                                        fontWeight: FontWeight.w500,
                                         color: kTextColor,
+                                        fontFamily: 'GothaPro',
                                         fontSize: 14),
                                   ),
                                 ),
@@ -222,7 +235,10 @@ class DynamicImgSlider extends StatelessWidget {
                                   child: Text(
                                     'GTDSL-019',
                                     style: TextStyle(
-                                        color: dSecondaryColors, fontSize: 13),
+                                        color: dSecondaryColors,
+                                        fontSize: 13,
+                                        fontFamily: 'GothaPro',
+                                        fontWeight: FontWeight.w300),
                                   ),
                                 ),
                                 Padding(
@@ -235,8 +251,9 @@ class DynamicImgSlider extends StatelessWidget {
                                       Text(
                                         '\$159.00',
                                         style: TextStyle(
-                                            color: dPrimeryColors,
+                                            color: kTextColor,
                                             fontSize: 14,
+                                            fontFamily: 'GothaPro',
                                             fontWeight: FontWeight.w500),
                                       ),
                                       SizedBox(
@@ -247,6 +264,7 @@ class DynamicImgSlider extends StatelessWidget {
                                         style: TextStyle(
                                             color: dPrimeryColors,
                                             fontSize: 14,
+                                            fontFamily: 'GothaPro',
                                             fontWeight: FontWeight.w500),
                                       ),
                                     ],
@@ -264,7 +282,7 @@ class DynamicImgSlider extends StatelessWidget {
                                 Container(
                                   width:
                                       MediaQuery.of(context).size.width / 2.8,
-                                  height:175,
+                                  height: 175,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
                                     image: DecorationImage(
@@ -280,6 +298,7 @@ class DynamicImgSlider extends StatelessWidget {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: kTextColor,
+                                        fontFamily: 'GothaPro',
                                         fontSize: 14),
                                   ),
                                 ),
@@ -289,21 +308,25 @@ class DynamicImgSlider extends StatelessWidget {
                                   child: Text(
                                     'GTDSL-019',
                                     style: TextStyle(
-                                        color: dSecondaryColors, fontSize: 13),
+                                        color: dSecondaryColors,
+                                        fontSize: 13,
+                                        fontFamily: 'GothaPro',
+                                        fontWeight: FontWeight.w300),
                                   ),
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                  const EdgeInsets.fromLTRB(0, 5, 0, 0),
                                   child: Row(
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       Text(
                                         '\$159.00',
                                         style: TextStyle(
-                                            color: dPrimeryColors,
+                                            color: kTextColor,
                                             fontSize: 14,
+                                            fontFamily: 'GothaPro',
                                             fontWeight: FontWeight.w500),
                                       ),
                                       SizedBox(
@@ -314,6 +337,7 @@ class DynamicImgSlider extends StatelessWidget {
                                         style: TextStyle(
                                             color: dPrimeryColors,
                                             fontSize: 14,
+                                            fontFamily: 'GothaPro',
                                             fontWeight: FontWeight.w500),
                                       ),
                                     ],
@@ -331,8 +355,7 @@ class DynamicImgSlider extends StatelessWidget {
                                 Container(
                                   width:
                                       MediaQuery.of(context).size.width / 2.8,
-                                  height:
-                                      175,
+                                  height: 175,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
                                     image: DecorationImage(
@@ -357,21 +380,25 @@ class DynamicImgSlider extends StatelessWidget {
                                   child: Text(
                                     'GTDSL-019',
                                     style: TextStyle(
-                                        color: dSecondaryColors, fontSize: 13),
+                                        color: dSecondaryColors,
+                                        fontSize: 13,
+                                        fontFamily: 'GothaPro',
+                                        fontWeight: FontWeight.w300),
                                   ),
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                  const EdgeInsets.fromLTRB(0, 5, 0, 0),
                                   child: Row(
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       Text(
                                         '\$159.00',
                                         style: TextStyle(
-                                            color: dPrimeryColors,
+                                            color: kTextColor,
                                             fontSize: 14,
+                                            fontFamily: 'GothaPro',
                                             fontWeight: FontWeight.w500),
                                       ),
                                       SizedBox(
@@ -382,6 +409,7 @@ class DynamicImgSlider extends StatelessWidget {
                                         style: TextStyle(
                                             color: dPrimeryColors,
                                             fontSize: 14,
+                                            fontFamily: 'GothaPro',
                                             fontWeight: FontWeight.w500),
                                       ),
                                     ],
@@ -405,8 +433,9 @@ class DynamicImgSlider extends StatelessWidget {
                         "Categories",
                         style: TextStyle(
                             color: kTexttitle,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
+                            fontSize: 16,
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                     Padding(
@@ -415,8 +444,9 @@ class DynamicImgSlider extends StatelessWidget {
                         "View all",
                         style: TextStyle(
                             color: dSecondaryColors,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500),
+                            fontSize: 14,
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                   ],
@@ -457,6 +487,7 @@ class DynamicImgSlider extends StatelessWidget {
                                     style: TextStyle(
                                         color: kTextColor,
                                         fontSize: 15,
+                                        fontFamily: 'GothaPro',
                                         fontWeight: FontWeight.w500),
                                   ),
                                 )
@@ -485,6 +516,7 @@ class DynamicImgSlider extends StatelessWidget {
                                     style: TextStyle(
                                         color: kTextColor,
                                         fontSize: 15,
+                                        fontFamily: 'GothaPro',
                                         fontWeight: FontWeight.w500),
                                   ),
                                 )
@@ -513,6 +545,7 @@ class DynamicImgSlider extends StatelessWidget {
                                     style: TextStyle(
                                         color: kTextColor,
                                         fontSize: 15,
+                                        fontFamily: 'GothaPro',
                                         fontWeight: FontWeight.w500),
                                   ),
                                 )
@@ -534,8 +567,9 @@ class DynamicImgSlider extends StatelessWidget {
                         "Clearance Sale",
                         style: TextStyle(
                             color: kTexttitle,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
+                            fontSize: 16,
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                   ],

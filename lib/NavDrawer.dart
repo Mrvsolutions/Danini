@@ -134,28 +134,28 @@ class _NavDrawerState extends State<NavDrawer> {
                         ),
                       )),
                   Padding(
-                    padding:
-                        EdgeInsets.only(top: 50.0, left: 0, right: 0),
+                    padding: EdgeInsets.only(top: 50.0, left: 0, right: 0),
                     child: Center(
                       child: Text(
                         "Vimal Parmar",
                         style: TextStyle(
                             color: kdrawertitlecolor,
                             fontSize: 22,
-                            fontWeight: FontWeight.w700),
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w500),
                       ),
                     ),
                   ),
                   Padding(
-                    padding:
-                    EdgeInsets.only(top: 100.0, left: 0, right: 0),
+                    padding: EdgeInsets.only(top: 100.0, left: 0, right: 0),
                     child: Center(
                       child: Text(
                         "VimalParmar@gmail.com",
                         style: TextStyle(
                             color: kdrawertitlecolor,
                             fontSize: 16,
-                            fontWeight: FontWeight.w400),
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                   ),
@@ -169,12 +169,18 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Home'),
-            onTap: () =>  Navigator.of(context).pushAndRemoveUntil(
+            title: Text(
+              'Home',
+              style: TextStyle(
+                  color: kdrawertitlecolor,
+                  fontSize: 16,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w300),
+            ),
+            onTap: () => Navigator.of(context).pushAndRemoveUntil(
                 MaterialPageRoute(
-                    builder: (BuildContext context) =>
-                        Dashboard()),
-                    (Route<dynamic> route) => false),
+                    builder: (BuildContext context) => Dashboard()),
+                (Route<dynamic> route) => false),
           ),
           ListTile(
             leading: Image.asset(
@@ -182,7 +188,12 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Categories'),
+            title: Text('Categories',
+              style: TextStyle(
+                  color: kdrawertitlecolor,
+                  fontSize: 16,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w300),),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -191,7 +202,12 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Discount Coupon'),
+            title: Text('Discount Coupon',
+              style: TextStyle(
+                  color: kdrawertitlecolor,
+                  fontSize: 16,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w300),),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -200,7 +216,12 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Order history'),
+            title: Text('Order history',
+              style: TextStyle(
+                  color: kdrawertitlecolor,
+                  fontSize: 16,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w300),),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -209,7 +230,12 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Cart'),
+            title: Text('Cart',
+              style: TextStyle(
+                  color: kdrawertitlecolor,
+                  fontSize: 16,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w300),),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -218,12 +244,22 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Notifications'),
+            title: Text('Notifications',
+              style: TextStyle(
+                  color: kdrawertitlecolor,
+                  fontSize: 16,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w300),),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
             leading: Icon(Icons.person, color: Colors.grey),
-            title: Text('My Account'),
+            title: Text('My Account',
+              style: TextStyle(
+                  color: kdrawertitlecolor,
+                  fontSize: 16,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w300),),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -232,7 +268,12 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Settings'),
+            title: Text('Settings',
+              style: TextStyle(
+                  color: kdrawertitlecolor,
+                  fontSize: 16,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w300),),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -241,7 +282,12 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('About'),
+            title: Text('About',
+              style: TextStyle(
+                  color: kdrawertitlecolor,
+                  fontSize: 16,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w300),),
             onTap: () => {Navigator.of(context).pop()},
           ),
         ],

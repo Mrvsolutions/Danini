@@ -2,10 +2,10 @@ import 'package:danini/Comman/ColorFile.dart';
 import 'package:danini/models/Product.dart';
 import 'package:flutter/material.dart';
 
-
 class ItemCard extends StatelessWidget {
   final Product product;
   final void Function() press;
+
   const ItemCard({
     Key? key,
     required this.product,
@@ -32,7 +32,7 @@ class ItemCard extends StatelessWidget {
               ),
               child: Hero(
                 tag: "${product.id}",
-                child: Image.asset(product.image,fit: BoxFit.cover),
+                child: Image.asset(product.image, fit: BoxFit.cover),
               ),
             ),
           ),
@@ -41,12 +41,18 @@ class ItemCard extends StatelessWidget {
             child: Text(
               // products is out demo list
               product.title,
-              style: TextStyle(color: kTextColor,fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  color: kTextColor,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w500),
             ),
           ),
           Text(
             "\$${product.price}",
-            style: TextStyle(color: ktextpriceColor),
+            style: TextStyle(
+                color: ktextpriceColor,
+                fontFamily: 'GothaPro',
+                fontWeight: FontWeight.w300),
           )
         ],
       ),

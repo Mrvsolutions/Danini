@@ -21,8 +21,16 @@ class Body extends StatelessWidget {
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search,color: ktextpriceColor,),
-                      hintText: "Search",hintStyle: TextStyle(fontSize: 14,color: ktextpriceColor),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: ktextpriceColor,
+                      ),
+                      hintText: "Search",
+                      hintStyle: TextStyle(
+                          fontSize: 12,
+                          color: ktextpriceColor,
+                          fontFamily: 'GothaPro',
+                          fontWeight: FontWeight.w300),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           borderSide: BorderSide.none),
@@ -40,7 +48,10 @@ class Body extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: IconButton(
-                    icon: Icon(Icons.filter_list,color: Colors.white,),
+                    icon: Icon(
+                      Icons.filter_list,
+                      color: Colors.white,
+                    ),
                     onPressed: () {
                       // Provider.of<MyBottomSheetModel>(context)
                       //     .changeState();

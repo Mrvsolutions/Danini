@@ -65,6 +65,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
                                           fontSize: 17,
+                                          fontFamily: 'GothaPro',
                                           color: kTextColor,
                                         ),
                                         textAlign: TextAlign.justify,
@@ -81,7 +82,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                             style: TextStyle(
                                                 color: ktextpriceColor,
                                                 fontSize: 17,
-                                                fontWeight: FontWeight.w300),
+                                                fontFamily: 'GothaPro',
+                                                fontWeight: FontWeight.w500),
                                           ),
                                           Container(
                                             padding: EdgeInsets.all(3),
@@ -96,7 +98,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     child: Icon(
                                                       Icons.remove,
                                                       color: dSecondaryColors,
-                                                      size: 16,
+                                                      size: 14,
                                                     )),
                                                 Container(
                                                   margin: EdgeInsets.symmetric(
@@ -112,8 +114,11 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                   child: Text(
                                                     '1',
                                                     style: TextStyle(
+                                                        fontFamily: 'GothaPro',
                                                         color: dSecondaryColors,
-                                                        fontSize: 16),
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        fontSize: 14),
                                                   ),
                                                 ),
                                                 InkWell(
@@ -121,7 +126,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     child: Icon(
                                                       Icons.add,
                                                       color: dSecondaryColors,
-                                                      size: 16,
+                                                      size: 14,
                                                     )),
                                               ],
                                             ),
@@ -138,6 +143,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: kTextColor,
+                                              fontFamily: 'GothaPro',
                                               fontWeight: FontWeight.w500),
                                         ),
                                       ),
@@ -174,6 +180,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                           color: pressAttention1
                                                               ? Colors.white
                                                               : dSecondaryColors,
+                                                          fontFamily:
+                                                              'GothaPro',
                                                           fontWeight:
                                                               FontWeight.w500,
                                                           fontSize: 14),
@@ -208,6 +216,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                           color: pressAttention2
                                                               ? Colors.white
                                                               : dSecondaryColors,
+                                                          fontFamily:
+                                                              'GothaPro',
                                                           fontWeight:
                                                               FontWeight.w500,
                                                           fontSize: 14),
@@ -242,6 +252,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                           color: pressAttention3
                                                               ? Colors.white
                                                               : dSecondaryColors,
+                                                          fontFamily:
+                                                              'GothaPro',
                                                           fontWeight:
                                                               FontWeight.w500,
                                                           fontSize: 14),
@@ -276,6 +288,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                           color: pressAttention4
                                                               ? Colors.white
                                                               : dSecondaryColors,
+                                                          fontFamily:
+                                                              'GothaPro',
                                                           fontWeight:
                                                               FontWeight.w500,
                                                           fontSize: 14),
@@ -297,6 +311,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: kTextColor,
+                                              fontFamily: 'GothaPro',
                                               fontWeight: FontWeight.w500),
                                         ),
                                       ),
@@ -322,7 +337,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     "Luxurious Fabric Signature 100% Egyptian Cotton",
                                                     style: TextStyle(
                                                         fontWeight:
-                                                            FontWeight.w400,
+                                                            FontWeight.w100,
+                                                        fontFamily: 'GothaPro',
                                                         color: kdetailcolor,
                                                         fontSize: 12),
                                                     textAlign: TextAlign.left,
@@ -346,7 +362,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     "Immaculate Details",
                                                     style: TextStyle(
                                                         fontWeight:
-                                                            FontWeight.w400,
+                                                            FontWeight.w100,
+                                                        fontFamily: 'GothaPro',
                                                         color: kdetailcolor,
                                                         fontSize: 12),
                                                     textAlign: TextAlign.left,
@@ -370,7 +387,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     "Perfect Slim Fit",
                                                     style: TextStyle(
                                                         fontWeight:
-                                                            FontWeight.w400,
+                                                            FontWeight.w100,
+                                                        fontFamily: 'GothaPro',
                                                         color: kdetailcolor,
                                                         fontSize: 12),
                                                     textAlign: TextAlign.left,
@@ -391,6 +409,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: kTextColor,
+                                              fontFamily: 'GothaPro',
                                               fontWeight: FontWeight.w500),
                                         ),
                                       ),
@@ -410,6 +429,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     style: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        fontFamily: 'GothaPro',
                                                         color: kTextColor,
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
@@ -419,7 +439,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     style: TextStyle(
                                                         color: ktextpriceColor,
                                                         fontWeight:
-                                                            FontWeight.w300,
+                                                            FontWeight.w100,
+                                                        fontFamily: 'GothaPro',
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   )
@@ -437,6 +458,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         color: kTextColor,
+                                                        fontFamily: 'GothaPro',
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   ),
@@ -445,7 +467,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     style: TextStyle(
                                                         color: ktextpriceColor,
                                                         fontWeight:
-                                                            FontWeight.w300,
+                                                            FontWeight.w100,
+                                                        fontFamily: 'GothaPro',
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   )
@@ -462,6 +485,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     style: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        fontFamily: 'GothaPro',
                                                         color: kTextColor,
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
@@ -471,7 +495,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                     style: TextStyle(
                                                         color: ktextpriceColor,
                                                         fontWeight:
-                                                            FontWeight.w300,
+                                                            FontWeight.w100,
+                                                        fontFamily: 'GothaPro',
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   )
@@ -488,6 +513,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: kTextColor,
+                                              fontFamily: 'GothaPro',
                                               fontWeight: FontWeight.w500),
                                         ),
                                       ),
@@ -498,6 +524,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 12,
                                               color: kTexttitle,
+                                              fontFamily: 'GothaPro',
                                               fontWeight: FontWeight.w300),
                                         ),
                                       ),
@@ -507,6 +534,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 11,
                                               color: ktextpriceColor,
+                                              fontFamily: 'GothaPro',
                                               fontWeight: FontWeight.w300),
                                           textAlign: TextAlign.justify,
                                         ),
@@ -596,7 +624,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
-                            fontWeight: FontWeight.w600),
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w500),
                       ),
                     ),
                   ),

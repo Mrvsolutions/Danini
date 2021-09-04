@@ -9,9 +9,16 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  List<String> categories = ["Slim Fit", "Contemporary", "Classic", "All shirts"];
+  List<String> categories = [
+    "Slim Fit",
+    "Contemporary",
+    "Classic",
+    "All shirts"
+  ];
+
   // By default our first item will be selected
   int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -42,9 +49,9 @@ class _CategoriesState extends State<Categories> {
             Text(
               categories[index],
               style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: selectedIndex == index ? kTextColor : kTextLightColor,
-              ),
+                  fontWeight: FontWeight.w500,
+                  color: selectedIndex == index ? kTextColor : kTextLightColor,
+                  fontFamily: 'GothaPro'),
             ),
             Container(
               margin: EdgeInsets.only(top: 20 / 4), //top padding 5

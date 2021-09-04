@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'Comman/ColorFile.dart';
 
 PreferredSize BuildAppToolBar(
-    BuildContext context,String TitleHeading,bool IsBackArrowShow) {
+    BuildContext context, String TitleHeading, bool IsBackArrowShow) {
   bool _isVisible = false;
   bool _IsHomeIconShow = false;
   int selectedindix = 0;
@@ -17,15 +17,13 @@ PreferredSize BuildAppToolBar(
       elevation: 0,
       leading: IconButton(
         icon: Icon(
-          IsBackArrowShow? Icons.arrow_back_ios:Icons.menu_rounded,
+          IsBackArrowShow ? Icons.arrow_back_ios : Icons.menu_rounded,
           color: dPrimeryColors,
         ),
         onPressed: () {
-          if (IsBackArrowShow)
-            {
-              Navigator.pop(context);
-            }
-          else{
+          if (IsBackArrowShow) {
+            Navigator.pop(context);
+          } else {
             Scaffold.of(context).openDrawer();
           }
         },
@@ -34,7 +32,10 @@ PreferredSize BuildAppToolBar(
         child: Text(
           TitleHeading,
           style: TextStyle(
-              fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold),
+              fontSize: 18,
+              color: Colors.black,
+              fontFamily: 'GothaPro',
+              fontWeight: FontWeight.w500),
         ),
       ),
       actions: <Widget>[

@@ -41,7 +41,8 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
               style: TextStyle(
                   color: dPrimeryColors,
                   fontSize: 30,
-                  fontWeight: FontWeight.bold),
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w700),
             ),
             Padding(
               padding: const EdgeInsets.all(20),
@@ -49,8 +50,9 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
                 StrWelcomeDesription,
                 style: TextStyle(
                     color: dPrimeryColors,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400),
+                    fontSize: 11,
+                    fontFamily: 'GothaPro',
+                    fontWeight: FontWeight.w300),
               ),
             ),
             SizedBox(
@@ -75,7 +77,8 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
                         "Sign in",
                         style: TextStyle(
                             color: Colors.white,
-                            fontWeight: FontWeight.w400,
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w500,
                             fontSize: 18),
                       ),
                       color: dPrimeryColors,
@@ -101,7 +104,8 @@ class _MyWelcomePageState extends State<MyWelcomePage> {
                         "Sign up",
                         style: TextStyle(
                             color: dPrimeryColors,
-                            fontWeight: FontWeight.w400,
+                            fontFamily: 'GothaPro',
+                            fontWeight: FontWeight.w500,
                             fontSize: 18),
                       ),
                       color: Colors.white,

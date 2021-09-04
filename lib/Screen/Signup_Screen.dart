@@ -22,7 +22,8 @@ class Signup_Screen extends StatelessWidget {
                 style: TextStyle(
                   color: dPrimeryColors,
                   fontSize: 26,
-                  fontWeight: FontWeight.bold,
+                  fontFamily: 'GothaPro',
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ),
@@ -62,7 +63,11 @@ class Signup_Screen extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   forgotPassword,
-                  style: TextStyle(color: dPrimeryColors),
+                  style: TextStyle(
+                      color: dPrimeryColors,
+                      fontFamily: 'GothaPro',
+                      fontSize: 14,
+                      fontWeight: FontWeight.w300),
                 ),
               ),
             ),
@@ -86,7 +91,8 @@ class Signup_Screen extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
-                      fontWeight: FontWeight.w600),
+                      fontFamily: 'GothaPro',
+                      fontWeight: FontWeight.w700),
                 ),
               ),
             ),
@@ -95,7 +101,11 @@ class Signup_Screen extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 orViaSocialMedia,
-                style: TextStyle(color: dSecondaryColors, fontSize: 12),
+                style: TextStyle(
+                    color: dSecondaryColors,
+                    fontSize: 12,
+                    fontFamily: 'GothaPro',
+                    fontWeight: FontWeight.w300),
               ),
             ),
             SizedBox(height: 20),
@@ -113,6 +123,13 @@ class Signup_Screen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Text(
+                  alreadyHaveAccount,
+                  style: TextStyle(
+                      color: colorbottomtext,
+                      fontFamily: 'GothaPro',
+                      fontWeight: FontWeight.w300),
+                ),
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pushAndRemoveUntil(
@@ -123,7 +140,9 @@ class Signup_Screen extends StatelessWidget {
                   child: Text(
                     signIn,
                     style: TextStyle(
-                        color: dPrimeryColors, fontWeight: FontWeight.bold),
+                        color: dPrimeryColors,
+                        fontFamily: 'GothaPro',
+                        fontWeight: FontWeight.w300),
                   ),
                 ),
               ],
@@ -171,6 +190,11 @@ class BuildTextField extends StatelessWidget {
       children: [
         TextField(
           textAlign: TextAlign.start,
+          style: TextStyle(
+              color: dPrimeryColors,
+              fontSize: 15,
+              fontFamily: 'GothaPro',
+              fontWeight: FontWeight.w300),
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 20),
             border: InputBorder.none,

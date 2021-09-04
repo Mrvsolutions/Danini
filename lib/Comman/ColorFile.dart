@@ -10,3 +10,4 @@ const ktextpriceColor = Color(0xFF77869c);
 const koffwhite = Color(0xFFf2f2f2);
 const kdetailcolor = Color(0xFF2e2e2e);
 const kdrawertitlecolor = Color(0xFF393939);
+const colorbottomtext = Color(0xFF969696);
