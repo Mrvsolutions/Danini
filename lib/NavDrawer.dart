@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'Comman/ColorFile.dart';
+import 'Screen/Dashboard/Dashboard.dart';
 
 class NavDrawer extends StatefulWidget {
   @override
@@ -169,7 +170,11 @@ class _NavDrawerState extends State<NavDrawer> {
               width: 20,
             ),
             title: Text('Home'),
-            onTap: () => {},
+            onTap: () =>  Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        Dashboard()),
+                    (Route<dynamic> route) => false),
           ),
           ListTile(
             leading: Image.asset(

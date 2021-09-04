@@ -35,7 +35,7 @@ class DynamicImgSlider extends StatelessWidget {
                         Expanded(
                           child: TextField(
                             decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.search,color: ktextpriceColor,),
+                              prefixIcon: Icon(Icons.search,color: ktextpriceColor),
                               hintText: "Search",hintStyle: TextStyle(fontSize: 14,color: ktextpriceColor),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0),
@@ -48,6 +48,7 @@ class DynamicImgSlider extends StatelessWidget {
                         SizedBox(width: 5),
                         Container(
                           height: 40,
+                          width: 40,
                           decoration: BoxDecoration(
                             color: ktextpriceColor,
                             borderRadius: BorderRadius.circular(5),

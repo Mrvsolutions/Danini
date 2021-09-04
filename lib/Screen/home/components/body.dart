@@ -34,6 +34,7 @@ class Body extends StatelessWidget {
                 SizedBox(width: 5),
                 Container(
                   height: 40,
+                  width: 40,
                   decoration: BoxDecoration(
                     color: ktextpriceColor,
                     borderRadius: BorderRadius.circular(5),
