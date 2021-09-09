@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:danini/Screen/Categories/Categories.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -194,7 +195,14 @@ class _NavDrawerState extends State<NavDrawer> {
                   fontSize: 16,
                   fontFamily: 'GothaPro',
                   fontWeight: FontWeight.w300),),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () {
+              Navigator.pop(context);
+                Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CategoriesPage(),
+                ));
+            }
           ),
           ListTile(
             leading: Image.asset(
