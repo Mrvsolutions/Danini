@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:danini/Screen/Categories/Categories.dart';
+import 'package:danini/Screen/SettingPage/SettingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -184,38 +185,41 @@ class _NavDrawerState extends State<NavDrawer> {
                 (Route<dynamic> route) => false),
           ),
           ListTile(
-            leading: Image.asset(
-              'assets/ic_categories.png',
-              height: 20,
-              width: 20,
-            ),
-            title: Text('Categories',
-              style: TextStyle(
-                  color: kdrawertitlecolor,
-                  fontSize: 16,
-                  fontFamily: 'GothaPro',
-                  fontWeight: FontWeight.w300),),
-            onTap: () {
-              Navigator.pop(context);
+              leading: Image.asset(
+                'assets/ic_categories.png',
+                height: 20,
+                width: 20,
+              ),
+              title: Text(
+                'Categories',
+                style: TextStyle(
+                    color: kdrawertitlecolor,
+                    fontSize: 16,
+                    fontFamily: 'GothaPro',
+                    fontWeight: FontWeight.w300),
+              ),
+              onTap: () {
+                Navigator.pop(context);
                 Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CategoriesPage(),
-                ));
-            }
-          ),
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CategoriesPage(),
+                    ));
+              }),
           ListTile(
             leading: Image.asset(
               'assets/ic_discount_coupon.png',
               height: 20,
               width: 20,
             ),
-            title: Text('Discount Coupon',
+            title: Text(
+              'Discount Coupon',
               style: TextStyle(
                   color: kdrawertitlecolor,
                   fontSize: 16,
                   fontFamily: 'GothaPro',
-                  fontWeight: FontWeight.w300),),
+                  fontWeight: FontWeight.w300),
+            ),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -224,12 +228,14 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Order history',
+            title: Text(
+              'Order history',
               style: TextStyle(
                   color: kdrawertitlecolor,
                   fontSize: 16,
                   fontFamily: 'GothaPro',
-                  fontWeight: FontWeight.w300),),
+                  fontWeight: FontWeight.w300),
+            ),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -238,12 +244,14 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Cart',
+            title: Text(
+              'Cart',
               style: TextStyle(
                   color: kdrawertitlecolor,
                   fontSize: 16,
                   fontFamily: 'GothaPro',
-                  fontWeight: FontWeight.w300),),
+                  fontWeight: FontWeight.w300),
+            ),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -252,22 +260,26 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Notifications',
+            title: Text(
+              'Notifications',
               style: TextStyle(
                   color: kdrawertitlecolor,
                   fontSize: 16,
                   fontFamily: 'GothaPro',
-                  fontWeight: FontWeight.w300),),
+                  fontWeight: FontWeight.w300),
+            ),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
             leading: Icon(Icons.person, color: Colors.grey),
-            title: Text('My Account',
+            title: Text(
+              'My Account',
               style: TextStyle(
                   color: kdrawertitlecolor,
                   fontSize: 16,
                   fontFamily: 'GothaPro',
-                  fontWeight: FontWeight.w300),),
+                  fontWeight: FontWeight.w300),
+            ),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
@@ -276,13 +288,22 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('Settings',
+            title: Text(
+              'Settings',
               style: TextStyle(
                   color: kdrawertitlecolor,
                   fontSize: 16,
                   fontFamily: 'GothaPro',
-                  fontWeight: FontWeight.w300),),
-            onTap: () => {Navigator.of(context).pop()},
+                  fontWeight: FontWeight.w300),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingsPage(),
+                  ));
+            },
           ),
           ListTile(
             leading: Image.asset(
@@ -290,12 +311,14 @@ class _NavDrawerState extends State<NavDrawer> {
               height: 20,
               width: 20,
             ),
-            title: Text('About',
+            title: Text(
+              'About',
               style: TextStyle(
                   color: kdrawertitlecolor,
                   fontSize: 16,
                   fontFamily: 'GothaPro',
-                  fontWeight: FontWeight.w300),),
+                  fontWeight: FontWeight.w300),
+            ),
             onTap: () => {Navigator.of(context).pop()},
           ),
         ],
