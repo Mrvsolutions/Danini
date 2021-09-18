@@ -1,3 +1,4 @@
+import 'package:danini/Screen/OrderSummarry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -43,7 +44,13 @@ PreferredSize BuildAppToolBar(
           visible:_isVisible ,
           child: IconButton(
             icon: Icon(Icons.shopping_cart_outlined, color: dPrimeryColors),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => OrderSummarry(),
+                  ));
+            },
           ),
         ),
         SizedBox(width: 20 / 2)

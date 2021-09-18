@@ -84,6 +84,19 @@ flutter:
           weight: 100
         - asset: assets/fonts/GothaProBla.otf
           weight: 900
+
+    - family: GothaProRegular
+      fonts:
+        - asset: assets/fonts/GothaProReg.otf
+
+    - family: GothaProLight
+      fonts:
+        - asset: assets/fonts/GothaProLig.otf
+
+    - family: GothaProMedium
+      fonts:
+          - asset: assets/fonts/GothaProMed.otf
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
