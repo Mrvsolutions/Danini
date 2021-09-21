@@ -1,5 +1,6 @@
 import 'package:danini/BuildAppToolBar.dart';
 import 'package:danini/Comman/ColorFile.dart';
+import 'package:danini/Screen/AddDeliveryAddressPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -59,23 +60,32 @@ class _OrderSummarryState extends State<OrderSummarry> {
                         ),
                       ),
                     ),
-                    Container(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          width: double.infinity,
-                          height: 45,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              color: dPrimeryColors,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Text(
-                            "Change or Add Address",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontFamily: 'GothaProMedium',
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => AddDeliveryAddressPage(),
+                            ));
+                      },
+                      child: Container(
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            width: double.infinity,
+                            height: 45,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                color: dPrimeryColors,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Text(
+                              "Change or Add Address",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontFamily: 'GothaProMedium',
+                              ),
                             ),
                           ),
                         ),
