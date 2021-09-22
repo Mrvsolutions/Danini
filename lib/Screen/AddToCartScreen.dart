@@ -1,19 +1,20 @@
-import 'package:danini/BuildAppToolBar.dart';
 import 'package:danini/Comman/ColorFile.dart';
-import 'package:danini/Screen/AddDeliveryAddressPage.dart';
+import 'package:danini/Screen/OrderSummarry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class OrderSummarry extends StatefulWidget {
+import '../BuildAppToolBar.dart';
+
+class AddToCartScreen extends StatefulWidget {
   @override
-  _OrderSummarryState createState() => _OrderSummarryState();
+  _AddToCartScreenState createState() => _AddToCartScreenState();
 }
 
-class _OrderSummarryState extends State<OrderSummarry> {
+class _AddToCartScreenState extends State<AddToCartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: BuildAppToolBar(context, "Order Summarry", true, false),
+        appBar: BuildAppToolBar(context, "Cart", true, true),
         body: Stack(
           children: [
             Container(
@@ -25,74 +26,6 @@ class _OrderSummarryState extends State<OrderSummarry> {
                   children: [
                     SizedBox(
                       height: 2,
-                    ),
-                    Container(
-                      color: Colors.white,
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Text(
-                            "Vimal Parmar",
-                            style: TextStyle(
-                              color: kTextColor,
-                              fontSize: 16,
-                              fontFamily: 'GothaPro',
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      color: Colors.white,
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-                          child: Text(
-                            "Service Ontario Rue Levy,Montreal P.O. Box 9200 Kingston, ON, K7L 5K4\n514-978-2614",
-                            style: TextStyle(
-                                color: kTextColor,
-                                fontSize: 14,
-                                height: 1.5,
-                                fontFamily: 'GothaProRegular'),
-                          ),
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: (){
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => AddDeliveryAddressPage(),
-                            ));
-                      },
-                      child: Container(
-                        color: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Container(
-                            width: double.infinity,
-                            height: 45,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                                color: dPrimeryColors,
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Text(
-                              "Change or Add Address",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontFamily: 'GothaProMedium',
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
                     ),
                     Container(
                       color: Colors.white,
@@ -257,6 +190,70 @@ class _OrderSummarryState extends State<OrderSummarry> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
+                              "Have A Promotional Code?",
+                              style: TextStyle(
+                                color: kTextColor,
+                                fontSize: 15,
+                                fontFamily: 'GothaProMedium',
+                              ),
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Image(
+                                  image: AssetImage("assets/ic_discount.png"),
+                                  height: 15,
+                                  width: 15,
+                                ),
+                                Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      hintText: "Enter Coupon Code",
+                                      hintStyle: TextStyle(
+                                        fontSize: 12,
+                                        color: colorhint,
+                                        fontFamily: 'GothaProLight',
+                                      ),
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(2.0),
+                                          borderSide: BorderSide.none),
+                                      fillColor: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  child: Text(
+                                    "APPLY",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      color: dPrimeryColors,
+                                      fontFamily: 'GothaProMedium',
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Container(
+                              height: 1,
+                              color: colorhint,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      color: Colors.white,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
                               "Payment Details",
                               style: TextStyle(
                                 color: kTextColor,
@@ -399,7 +396,9 @@ class _OrderSummarryState extends State<OrderSummarry> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 80,),
+                            SizedBox(
+                              height: 10,
+                            ),
                           ],
                         ),
                       ),
@@ -453,19 +452,28 @@ class _OrderSummarryState extends State<OrderSummarry> {
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-                            child: Container(
-                              width: 180,
-                              height: 45,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                  color: dPrimeryColors,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Text(
-                                "Make Payment",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontFamily: 'GothaPro',
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => OrderSummarry(),
+                                    ));
+                              },
+                              child: Container(
+                                width: 180,
+                                height: 45,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                    color: dPrimeryColors,
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Text(
+                                  "Place Order",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontFamily: 'GothaPro',
+                                  ),
                                 ),
                               ),
                             ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'Comman/ColorFile.dart';
+import 'Screen/AddToCartScreen.dart';
 
 PreferredSize BuildAppToolBar(
     BuildContext context, String TitleHeading, bool IsBackArrowShow, bool _isVisible) {
@@ -48,7 +49,7 @@ PreferredSize BuildAppToolBar(
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => OrderSummarry(),
+                    builder: (context) => AddToCartScreen(),
                   ));
             },
           ),
