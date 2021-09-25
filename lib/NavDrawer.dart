@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:danini/Screen/Categories/Categories.dart';
 import 'package:danini/Screen/MyProfilePage.dart';
+import 'package:danini/Screen/OrderHistory.dart';
 import 'package:danini/Screen/SettingPage/SettingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -237,7 +238,14 @@ class _NavDrawerState extends State<NavDrawer> {
                   fontFamily: 'GothaPro',
                   fontWeight: FontWeight.w300),
             ),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: ()  {
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => OrderHistory(),
+                  ));
+            },
           ),
           ListTile(
             leading: Image.asset(

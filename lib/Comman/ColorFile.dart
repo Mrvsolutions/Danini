@@ -14,4 +14,5 @@ const colorbottomtext = Color(0xFF969696);
 const colorSliderActive = Color(0xFF0e1d9e);
 const colorSliderInActive = Color(0xFFf5f5f7);
 const colorGreen = Color(0xFF36b813);
+const colorRed = Color(0xFFf12525);
 const colorhint = Color(0xFFdadada);
