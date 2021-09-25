@@ -1,5 +1,6 @@
 import 'package:danini/BuildAppToolBar.dart';
 import 'package:danini/Comman/ColorFile.dart';
+import 'package:danini/Screen/OrderHistoryDetail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -23,11 +24,11 @@ class _OrderHistoryState extends State<OrderHistory> {
                 return GestureDetector(
                     child: OrderHistoryListRow(),
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //       builder: (context) => ServiceElevetorDetail(ServiceElevetorlst)),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OrderhistoryDetail()),
+                      );
                     });
               },
               itemCount: 3,
