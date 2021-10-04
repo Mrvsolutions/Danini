@@ -16,3 +16,4 @@ const colorSliderInActive = Color(0xFFf5f5f7);
 const colorGreen = Color(0xFF36b813);
 const colorRed = Color(0xFFf12525);
 const colorhint = Color(0xFFdadada);
+const colorCardhint = Color(0xFFdedbdb);

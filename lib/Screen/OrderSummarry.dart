@@ -1,6 +1,7 @@
 import 'package:danini/BuildAppToolBar.dart';
 import 'package:danini/Comman/ColorFile.dart';
 import 'package:danini/Screen/AddDeliveryAddressPage.dart';
+import 'package:danini/Screen/PaymentPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -451,21 +452,30 @@ class _OrderSummarryState extends State<OrderSummarry> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-                            child: Container(
-                              width: 180,
-                              height: 45,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                  color: dPrimeryColors,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Text(
-                                "Make Payment",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontFamily: 'GothaPro',
+                          InkWell(
+                            onTap: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PaymentPage()),
+                              );
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                              child: Container(
+                                width: 180,
+                                height: 45,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                    color: dPrimeryColors,
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Text(
+                                  "Make Payment",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontFamily: 'GothaPro',
+                                  ),
                                 ),
                               ),
                             ),
