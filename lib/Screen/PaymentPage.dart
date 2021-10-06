@@ -1,4 +1,5 @@
 import 'package:danini/Comman/ColorFile.dart';
+import 'package:danini/Screen/AddPaymentCardPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -51,28 +52,37 @@ class _PaymentPageState extends State<PaymentPage> {
                                   fontFamily: 'GothaProMedium',
                                 ),
                               ),
-                              Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(5.0),
-                                    child: Image.asset(
-                                      'assets/ic_add.png',
-                                      height: 15,
-                                      width: 15,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(5.0),
-                                    child: Text(
-                                      "Add New Card",
-                                      style: TextStyle(
-                                        color: dPrimeryColors,
-                                        fontSize: 14,
-                                        fontFamily: 'GothaProMedium',
+                              InkWell(
+                                onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => AddPaymentCardPage()),
+                                  );
+                                },
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(5.0),
+                                      child: Image.asset(
+                                        'assets/ic_add.png',
+                                        height: 15,
+                                        width: 15,
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    Padding(
+                                      padding: const EdgeInsets.all(5.0),
+                                      child: Text(
+                                        "Add New Card",
+                                        style: TextStyle(
+                                          color: dPrimeryColors,
+                                          fontSize: 14,
+                                          fontFamily: 'GothaProMedium',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
