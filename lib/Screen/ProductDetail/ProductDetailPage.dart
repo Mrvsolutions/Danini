@@ -41,7 +41,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Container(
-                              height: MediaQuery.of(context).size.height / 3.8,
+                              height: MediaQuery.of(context).size.height / 2,
                               child: Obx(() => Carousel(
                                     dotBgColor: Colors.transparent,
                                     dotColor: Colors.black12,
@@ -63,15 +63,15 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                       Text(
                                         "Puple and Blue Dobby Windowpane Dress Shirt RD-S-014",
                                         style: TextStyle(
-                                          fontWeight: FontWeight.w500,
                                           fontSize: 17,
-                                          fontFamily: 'GothaPro',
+                                          height: 1.5,
+                                          fontFamily: 'GothaProMedium',
                                           color: kTextColor,
                                         ),
                                         textAlign: TextAlign.justify,
                                       ),
                                       SizedBox(
-                                        height: 8,
+                                        height: 15,
                                       ),
                                       Row(
                                         mainAxisAlignment:
@@ -82,8 +82,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                             style: TextStyle(
                                                 color: ktextpriceColor,
                                                 fontSize: 17,
-                                                fontFamily: 'GothaPro',
-                                                fontWeight: FontWeight.w500),
+                                                fontFamily: 'GothaProRegular',),
                                           ),
                                           Container(
                                             padding: EdgeInsets.all(3),
@@ -114,10 +113,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                   child: Text(
                                                     '1',
                                                     style: TextStyle(
-                                                        fontFamily: 'GothaPro',
+                                                        fontFamily: 'GothaProMedium',
                                                         color: dSecondaryColors,
-                                                        fontWeight:
-                                                            FontWeight.w500,
                                                         fontSize: 14),
                                                   ),
                                                 ),
@@ -134,7 +131,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         ],
                                       ),
                                       SizedBox(
-                                        height: 8,
+                                        height: 15,
                                       ),
                                       Align(
                                         alignment: Alignment.topLeft,
@@ -143,8 +140,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: kTextColor,
-                                              fontFamily: 'GothaPro',
-                                              fontWeight: FontWeight.w500),
+                                              fontFamily: 'GothaProMedium',),
                                         ),
                                       ),
                                       Padding(
@@ -181,9 +177,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                               ? Colors.white
                                                               : dSecondaryColors,
                                                           fontFamily:
-                                                              'GothaPro',
-                                                          fontWeight:
-                                                              FontWeight.w500,
+                                                              'GothaProMedium',
                                                           fontSize: 14),
                                                     ),
                                                   ),
@@ -217,9 +211,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                               ? Colors.white
                                                               : dSecondaryColors,
                                                           fontFamily:
-                                                              'GothaPro',
-                                                          fontWeight:
-                                                              FontWeight.w500,
+                                                              'GothaProMedium',
                                                           fontSize: 14),
                                                     ),
                                                   ),
@@ -253,9 +245,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                               ? Colors.white
                                                               : dSecondaryColors,
                                                           fontFamily:
-                                                              'GothaPro',
-                                                          fontWeight:
-                                                              FontWeight.w500,
+                                                              'GothaProMedium',
                                                           fontSize: 14),
                                                     ),
                                                   ),
@@ -289,9 +279,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                               ? Colors.white
                                                               : dSecondaryColors,
                                                           fontFamily:
-                                                              'GothaPro',
-                                                          fontWeight:
-                                                              FontWeight.w500,
+                                                              'GothaProMedium',
                                                           fontSize: 14),
                                                     ),
                                                   ),
@@ -302,7 +290,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         ),
                                       ),
                                       SizedBox(
-                                        height: 8,
+                                        height: 15,
                                       ),
                                       Align(
                                         alignment: Alignment.topLeft,
@@ -311,8 +299,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: kTextColor,
-                                              fontFamily: 'GothaPro',
-                                              fontWeight: FontWeight.w500),
+                                              fontFamily: 'GothaProMedium',),
                                         ),
                                       ),
                                       Padding(
@@ -320,6 +307,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Expanded(
                                               child: Column(
@@ -331,14 +319,14 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                         "assets/fabricimage.png"),
                                                   ),
                                                   SizedBox(
-                                                    height: 5,
+                                                    height: 8,
                                                   ),
                                                   Text(
                                                     "Luxurious Fabric Signature 100% Egyptian Cotton",
                                                     style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.normal,
+                                                        fontFamily: 'GothaProRegular',
                                                         color: kdetailcolor,
+                                                        height: 1.4,
                                                         fontSize: 12),
                                                     textAlign: TextAlign.left,
                                                   )
@@ -355,13 +343,12 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                         "assets/detailimage.png"),
                                                   ),
                                                   SizedBox(
-                                                    height: 5,
+                                                    height: 8,
                                                   ),
                                                   Text(
                                                     "Immaculate Details",
                                                     style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.normal,
+                                                        fontFamily: 'GothaProRegular',
                                                         color: kdetailcolor,
                                                         fontSize: 12),
                                                     textAlign: TextAlign.left,
@@ -379,13 +366,12 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                         "assets/slimfitimage.png"),
                                                   ),
                                                   SizedBox(
-                                                    height: 5,
+                                                    height: 8,
                                                   ),
                                                   Text(
                                                     "Perfect Slim Fit",
                                                     style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.normal,
+                                                        fontFamily: 'GothaProRegular',
                                                         color: kdetailcolor,
                                                         fontSize: 12),
                                                     textAlign: TextAlign.left,
@@ -397,7 +383,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                         ),
                                       ),
                                       SizedBox(
-                                        height: 8,
+                                        height: 15,
                                       ),
                                       Align(
                                         alignment: Alignment.topLeft,
@@ -406,9 +392,11 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: kTextColor,
-                                              fontFamily: 'GothaPro',
-                                              fontWeight: FontWeight.w500),
+                                              fontFamily: 'GothaProMedium',),
                                         ),
+                                      ),
+                                      SizedBox(
+                                        height: 15,
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.all(5.0),
@@ -424,19 +412,19 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                   Text(
                                                     "Weight",
                                                     style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontFamily: 'GothaPro',
+                                                        fontFamily: 'GothaProMedium',
                                                         color: kTextColor,
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
+                                                  ),
+                                                  SizedBox(
+                                                    height: 8,
                                                   ),
                                                   Text(
                                                     "5 Kg",
                                                     style: TextStyle(
                                                         color: ktextpriceColor,
-                                                        fontWeight:
-                                                            FontWeight.normal,
+                                                        fontFamily: 'GothaProRegular',
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   )
@@ -451,19 +439,19 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                   Text(
                                                     "Dimensions",
                                                     style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w500,
                                                         color: kTextColor,
-                                                        fontFamily: 'GothaPro',
+                                                        fontFamily: 'GothaProMedium',
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
+                                                  ),
+                                                  SizedBox(
+                                                    height: 8,
                                                   ),
                                                   Text(
                                                     "42.5 X 24.2 X 8.5 cm",
                                                     style: TextStyle(
                                                         color: ktextpriceColor,
-                                                        fontWeight:
-                                                            FontWeight.normal,
+                                                        fontFamily: 'GothaProRegular',
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   )
@@ -478,19 +466,20 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                                   Text(
                                                     "Fit",
                                                     style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontFamily: 'GothaPro',
+                                                        fontFamily: 'GothaProMedium',
                                                         color: kTextColor,
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
+                                                  ),
+
+                                                  SizedBox(
+                                                    height: 8,
                                                   ),
                                                   Text(
                                                     "Slim Fit",
                                                     style: TextStyle(
                                                         color: ktextpriceColor,
-                                                        fontWeight:
-                                                            FontWeight.normal,
+                                                        fontFamily: 'GothaProRegular',
                                                         fontSize: 16),
                                                     textAlign: TextAlign.left,
                                                   )
@@ -500,6 +489,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           ],
                                         ),
                                       ),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
                                       Align(
                                         alignment: Alignment.topLeft,
                                         child: Text(
@@ -507,9 +499,11 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: kTextColor,
-                                              fontFamily: 'GothaPro',
-                                              fontWeight: FontWeight.w500),
+                                              fontFamily: 'GothaProMedium',),
                                         ),
+                                      ),
+                                      SizedBox(
+                                        height: 10,
                                       ),
                                       Align(
                                         alignment: Alignment.topLeft,
@@ -518,8 +512,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           style: TextStyle(
                                               fontSize: 12,
                                               color: kTexttitle,
-                                              fontFamily: 'GothaPro',
-                                              fontWeight: FontWeight.w300),
+                                              fontFamily: 'GothaProRegular',),
                                         ),
                                       ),
                                       Container(
@@ -527,9 +520,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                           "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
                                           style: TextStyle(
                                               fontSize: 11,
+                                              height: 1.4,
                                               color: ktextpriceColor,
-                                              fontFamily: 'GothaPro',
-                                              fontWeight: FontWeight.w300),
+                                              fontFamily: 'GothaProRegular',),
                                           textAlign: TextAlign.justify,
                                         ),
                                       ),
@@ -618,8 +611,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
-                            fontFamily: 'GothaPro',
-                            fontWeight: FontWeight.w500),
+                            fontFamily: 'GothaProMedium',),
                       ),
                     ),
                   ),
